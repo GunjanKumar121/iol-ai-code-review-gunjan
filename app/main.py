@@ -4,12 +4,17 @@ from llm_reviewer import review_code
 from comment_parser import parse_comments
 from github_poster import post_comments
 
+from pr_context import get_pr_context
+
+
 def main():
-    pr_context = load_pr_context()
-    config = load_config()
-    llm_output = review_code(diff="", config=config)
-    comments = parse_comments(llm_output)
-    post_comments(comments, pr_context)
+    ctx = get_pr_context()
+
+    print("PR NUMBER:", ctx["pr_number"])
+    print("PR TITLE:", ctx["title"])
+    print("DIFF PREVIEW:")
+    print(ctx["diff"][:1000])
+
 
 if __name__ == "__main__":
     main()
