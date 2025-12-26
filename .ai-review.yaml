@@ -1,3 +1,4 @@
-ignore:
-  - tests/
-severity_threshold: warning
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
