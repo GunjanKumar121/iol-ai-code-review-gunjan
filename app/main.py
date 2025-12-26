@@ -6,7 +6,6 @@ from github_poster import post_comments
 
 from pr_context import get_pr_context
 
-
 def main():
     ctx = get_pr_context()
 
