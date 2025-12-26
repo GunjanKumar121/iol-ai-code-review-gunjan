@@ -1,1 +1,3 @@
-# iol-ai-code-review-gunjan
+# AI Code Review Bot
+
+This tool reviews GitHub pull requests using LLMs and posts actionable feedback.
